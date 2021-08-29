@@ -10,20 +10,11 @@
 	</parent>
 
 	<groupId>com.wsousa</groupId>
-	<artifactId>demo Cumcumber</artifactId>
+	<artifactId>demo-cumcumber</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>Cucumber-api</name>
 	<description>Spring Boot Cucumber</description>
-
-	<properties>
-		<java.version>1.8</java.version>
-		<junit-jupiter.version>5.6.0</junit-jupiter.version>
-		<mockito.version>2.24.0</mockito.version>
-		<rest-assured.version>4.2.0</rest-assured.version>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
 
 	<dependencies>
 		<dependency>
@@ -54,22 +45,35 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java8</artifactId>
-			<version>4.2.0</version>
+			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-spring</artifactId>
-			<version>4.2.0</version>
+			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
-			<version>4.2.0</version>
+			<version>${cucumber.version}</version>
 			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit-platform-engine</artifactId>
+			<version>${cucumber.version}</version>
 		</dependency>
 
 		<dependency>
@@ -187,5 +191,15 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<junit-jupiter.version>5.6.0</junit-jupiter.version>
+		<mockito.version>2.24.0</mockito.version>
+		<rest-assured.version>4.2.0</rest-assured.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<cucumber.version>6.10.4</cucumber.version>
+	</properties>
 
 </project>
